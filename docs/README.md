@@ -2,5 +2,5 @@
 home: true
 heroImage: /images/logo.jpeg
 actionText: Get Started →
-actionLink: /guide/
+actionLink: /guide/install/test
 ---
