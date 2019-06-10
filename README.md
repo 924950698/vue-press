@@ -1,6 +1,1 @@
----
-home: true
-heroImage: /images/logo.jpeg
-actionText: Get Started →
-actionLink: /guide/
----
+# 根目录下的readeMe
