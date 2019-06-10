@@ -1,8 +1,8 @@
 ---
 home: true
-heroImage: /hero.png
+heroImage: /images/logo.jpeg
 actionText: Get Started →
-actionLink: /guide/
+actionLink: /install/
 features:
 - title: Simplicity First
   details: Minimal setup with markdown-centered project structure helps you focus on writing.
