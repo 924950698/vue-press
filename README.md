@@ -1,4 +1,3 @@
-# 123000000
 ---
 home: true
 heroImage: /hero.png
