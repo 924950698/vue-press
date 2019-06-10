@@ -9,7 +9,7 @@ module.exports = {
   	repo: '924950698',// 默认是 false, 设置为 true 来启用，右上角会出现 github 跳转链接
   	lastUpdated: 'Last Updated', // 每个文档展示最近更新时间
   	nav: [
-      { text: '主页', link: '/' }
+      { text: '主页', link: '/guide/install/install' }
     ],
     sidebar: [
       {
