@@ -1,6 +1,5 @@
 module.exports = {
-  base: '/vue-press/',
-  title: '🚲 柳向东的 -- VuePress',
+  title: '🚲 踩坑侠的 -- VuePress',
   description: 'Just playing around',
   head: [
     ['link', { rel: 'icon', href: '/images/logo.jpeg' }]
@@ -18,6 +17,12 @@ module.exports = {
           collapsable: false,
           children: [      // 子菜单
             'install/test',   // 可在docs目录下创建install目录，此路径表示读取install目录下的README.md文件
+          ]
+        },{
+          title: 'gitLab',
+          collapsable: false,
+          children: [      // 子菜单
+            'gitLab/gitLab',   // 可在docs目录下创建install目录，此路径表示读取install目录下的README.md文件
           ]
         }
       ]
