@@ -1,5 +1,5 @@
 module.exports = {
-  title: '🚲 踩坑侠的 -- VuePress',
+  title: '🚲 踩坑侠的--“军火库”',
   description: 'Just playing around',
   head: [
     ['link', { rel: 'icon', href: '/images/logo.jpeg' }]
@@ -19,10 +19,25 @@ module.exports = {
             'install/test',   // 可在docs目录下创建install目录，此路径表示读取install目录下的README.md文件
           ]
         },{
-          title: 'gitLab',
+          title: 'gitLab篇',
           collapsable: false,
-          children: [      // 子菜单
-            'gitLab/gitLab',   // 可在docs目录下创建install目录，此路径表示读取install目录下的README.md文件
+          children: [      
+            'gitLab/gitLab',  
+          ]
+        },{
+          title: 'React篇',
+          collapsable: false,
+          children: [      
+            'React/React-SSR', //React服务端渲染   
+            'React/baseSkill',  //React基础技能篇
+            'React/trialError', //React试错篇
+            'React/hooks'       //React-Hooks篇  
+          ]
+        },{
+          title: 'Https篇',
+          collapsable: false,
+          children: [      
+            'Https/https', //网络协议篇
           ]
         }
       ]
