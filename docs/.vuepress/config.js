@@ -23,6 +23,7 @@ module.exports = {
           collapsable: false,
           children: [      
             'gitLab/gitLab',  
+            'gitLab/gitHub'
           ]
         },{
           title: 'React篇',
