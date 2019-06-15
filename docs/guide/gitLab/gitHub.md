@@ -10,3 +10,4 @@
 3. 一致则小绿点能正常显示。<br />
 如果不一致，则使用命令：<br />git config --global user.name <gitHub,s name><br />git config --global user.email <gitHub,s email>
 4. 设置完成以后，可用git config user.name 和 git config user.email来查看。
+5. 
