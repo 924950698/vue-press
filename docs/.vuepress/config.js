@@ -1,9 +1,5 @@
 module.exports = {
-<<<<<<< HEAD
-  title: '🚲 踩坑侠的 -- VuePress',
-=======
   title: '🚲 踩坑侠的--“军火库”',
->>>>>>> 20fb85817d405febba8d36f2f96c2ea8eba99caf
   description: 'Just playing around',
   head: [
     ['link', { rel: 'icon', href: '/images/logo.jpeg' }]
@@ -23,12 +19,6 @@ module.exports = {
             'install/test',   // 可在docs目录下创建install目录，此路径表示读取install目录下的README.md文件
           ]
         },{
-<<<<<<< HEAD
-          title: 'gitLab',
-          collapsable: false,
-          children: [      // 子菜单1
-            'gitLab/gitLab',   // 可在docs目录下创建install目录，此路径表示读取install目录下的README.md文件
-=======
           title: 'gitLab篇',
           collapsable: false,
           children: [      
@@ -49,7 +39,6 @@ module.exports = {
           collapsable: false,
           children: [      
             'Https/https', //网络协议篇
->>>>>>> 20fb85817d405febba8d36f2f96c2ea8eba99caf
           ]
         }
       ]

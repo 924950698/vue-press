@@ -53,3 +53,16 @@ GIT_COMMITTER_EMAIL='newEmail'
 ![](https://i.loli.net/2019/06/15/5d0474550fa6413175.png)
 
 10. 完成以后就可以看到昨天和今天commit记录的小绿点了。大家以后push的时候，记得先查看一下本地的name和email是否和仓库的一致。以免失误。
+
+
+## gitHub拉取远程分支，提示：```fatal: refusing to merge unrelated histories```
+1. 这个问题是因为 两个 根本不相干的 git 库， 一个是本地库， 一个是远端库， 然后本地要去推送到远端， 远端觉得这个本地库跟自己不相干， 所以告知无法合并。
+2. 有两种方法可以解决：
+  <br />第一种:<br />
+  重新clone远端的代码。
+   <br />第二种:<br />
+  使用命令：```git pull origin master --allow-unrelated-histories``` <br />
+  后面加上 ```--allow-unrelated-histories``` ， 把两段不相干的 分支进行强行合并
+3. 后面再push就可以了 git push gitlab master:init
+4. [传送门](https://www.centos.bz/2018/03/git-%E5%87%BA%E7%8E%B0-fatal-refusing-to-merge-unrelated-histories-%E9%94%99%E8%AF%AF/)
+
