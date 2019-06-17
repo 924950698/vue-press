@@ -40,7 +40,13 @@ module.exports = {
           children: [      
             'Https/https', //网络协议篇
           ]
-        }
+        },{
+          title: 'Linux篇',
+          collapsable: false,
+          children: [      
+            'Linux/fire', 
+          ]
+        },
       ]
     } 
   },
