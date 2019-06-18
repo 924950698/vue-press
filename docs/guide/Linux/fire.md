@@ -11,7 +11,7 @@
 3. 安装git: ```yum -y install git```
 4. 查看git版本：``` git --version```
 5. 注册gitHub账号，并给git添加用户名： ```useradd xxx```<br />
-密码: ```passwd ***```
+输入： ```passwd xxx```以后，就会提示用户输入密码
 6. 创建项目文件夹： ```mkdir FlameGraph``` 
 7. 进入文件夹，并克隆火焰图代码：```git clone https://github.com/brendangregg/FlameGraph.git```
 8. 先查看进程号，查看cpu前10的进程号：```ps aux|head -1;ps aux|grep -v PID|sort -rn -k +3|head```
