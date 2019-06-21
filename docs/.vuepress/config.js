@@ -18,7 +18,16 @@ module.exports = {
           children: [      // 子菜单
             'install/test',   // 可在docs目录下创建install目录，此路径表示读取install目录下的README.md文件
           ]
-        },{
+        },
+        {
+          title: 'Css篇',
+          collapsable: false,
+          children: [     
+            'Css/transition.md',
+            'Css/animation.md'
+          ]
+        },
+        {
           title: 'gitLab篇',
           collapsable: false,
           children: [      
@@ -45,6 +54,12 @@ module.exports = {
           collapsable: false,
           children: [      
             'Linux/fire', 
+          ]
+        },{
+          title: 'JavaScript篇',
+          collapsable: false,
+          children: [      
+            'JavaScript/data', 
           ]
         },
       ]
