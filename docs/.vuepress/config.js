@@ -15,7 +15,7 @@ module.exports = {
         {
           title: '入门',
           collapsable: false,
-          children: [      // 子菜单
+          children: [         // 子菜单
             'install/test',   // 可在docs目录下创建install目录，此路径表示读取install目录下的README.md文件
           ]
         },
@@ -23,8 +23,9 @@ module.exports = {
           title: 'Css篇',
           collapsable: false,
           children: [     
-            'Css/transition.md',
-            'Css/animation.md'
+            'Css/transition.md',//过渡
+            'Css/animation.md', //动画
+            'Css/basis.md'      //基础
           ]
         },
         {
@@ -60,6 +61,12 @@ module.exports = {
           collapsable: false,
           children: [      
             'JavaScript/data', 
+          ]
+        },{
+          title: 'Experience篇',
+          collapsable: false,
+          children: [      
+            'Experience/experience', 
           ]
         },
       ]
