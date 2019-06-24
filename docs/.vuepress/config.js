@@ -61,6 +61,7 @@ module.exports = {
           collapsable: false,
           children: [      
             'JavaScript/data', 
+            'JavaScript/Regexp'
           ]
         },{
           title: 'Experience篇',
