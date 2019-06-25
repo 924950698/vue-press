@@ -158,22 +158,87 @@ console.log(arrMatches);
 | {n, } | 至少出现n次 |
 | { ,n} | 出现0到n次 |
 
-3. 
+3. \b（边界匹配符）的用法：一边是单词字符(字母、数字或下划线)，另一边是 非单词字符。<br>
+下面的例子是一个简单的字面匹配。如果cat是一个子串的话，也能够成功匹配: 
 
+```
+//非子串：
+console.log(/cat/.test('a black cat')); //true
 
+//子串：
+console.log(/cat/.test('a blackcat')); //true
+```
 
+下面是使用了 ```\b``` 以后的例子：
 
+```
+//非子串：
+console.log(/\bcat/.test('a black cat')); //true
 
+//子串：
+console.log(/\bcat/.test('a blackcat')); //false
+console.log(/\bcat/.test('a cataa')); //true
+console.log(/\bcat\b/.test('a blackcat')); //false
+console.log(/\bcat\b/.test('a cat')); //true
+```
 
+** \b 作用：**
+上面的解释还是有点模糊，\b表示的是字符与字符之间看不见的东西（空格）。
+<br>如果想匹配cat字符串的话，需要写成：```/\bcat\b/```
+<br>详细解释看下图：
 
+![](https://i.loli.net/2019/06/25/5d11925d66e4080215.png)
 
+**exec的用法：** <br>
+exec()方法在获取匹配信息方面很有用，因为它会返回一个包含匹配信息的对象。exec() 返回的对象有一个index属性，可以告诉我们成功匹配出现在字符串中的哪个位置。这个功能在 不少地方都能派上用场:
 
+```
+var match = /\d+/.exec("There are 100 ways to do this");
+    console.log(match);
+    // ["100"]
+    console.log(match.index);
+// 10
+```
 
+**()组合符的用法：**<br>
+选择结构可以使用|(管道符)来表示。例如，/a|b/可以匹配字符a或b，/(ab)+|(cd)+/ 可以匹配一个或多个ab或cd。
 
+## 首部(^)与尾部($)
 
+我们经常需要确保模式在字符串的首部或尾部进行匹配。当脱字符(^)用作正则表达式的 第一个字符的时候，可以将匹配过程锁定在字符串的开头，因此，/^test/只能够匹配出现在待 匹配字符串起始位置上的test子串。与此类似，美元符号($)表示模式必须出现在字符串的尾部: /test$/。<br>
+^和$配合使用，表明指定的模式必须涵盖整个待匹配的字符串:/^test$/。
 
+## 向后引用
+在字符串String使用replace()方法时，可以使用特殊的字符序列$1,$2...来表示对应的分组。
 
+```
+var orig = "1234 5678";
+var re = /(\d{4}) (\d{4})/;
+var modifiedStr = orig.replace(re, "$2 $1"); 
+console.log(modifiedStr); // 输出"5678 1234"
+```
 
+## 贪婪限定符(所有限定符) 与 惰性限定符(?)
+例如，模式\d+能够匹配一个或多个数字。如果字符串是123的话，贪婪匹配可以匹配到1、 12和123。贪婪模式h.+1可以匹配字符串hello中的hell——这是能够匹配的最长的字符串。 因为\d+是贪婪匹配，所以它会尽可能多地匹配数字，故最后的匹配结果就是123。<br>
+与贪婪限定符相反，惰性限定符则是尽可能少地匹配字符。可以在正则表达式后面加上问号 (?)，使其成为惰性匹配。惰性模式h.?l可以匹配字符串hello中的hel—— 这是能够匹配到的最短的字符串。<br>
+模式\w*?X可以匹配到0个或多个单词以及一个X。但是```*```后的?表示应该尽可能少地匹配字 符。对于字符串abcXXX，匹配结果可以是abcX、abcXX或abcXXX，那究竟应该匹配哪一个呢? 因为*?是惰性模式，所以应该尽可能少地匹配，因此最后的匹配结果是abcX。<br>
+删除字符串首尾多余的空白字符是一个极其常见的用法。直到最近，String对象本身都没有 trim()方法，一些JavaScript库为没有String.trim()方法的旧浏览器提供了字符串修剪功能。 最常用的方法如下所示:<br>
+
+```
+function trim(str) {
+   return (str || "").replace(/^\s+|\s+$/g,"");
+}
+console.log("--"+trim("   test   ")+"--");
+//"--test--"
+
+//如果我们想把重复的空白字符替换成单个呢?
+
+ re=/\s+/g;
+ console.log('There are     a lot        of spaces'.replace(re,' '));
+ //"There are a lot of spaces"
+```
+在上面的代码片段中，我们尝试匹配一个或多个空格字符序列，然后将其替换成单个空格。<br>
+如你所见，正则表达式就像是JavaScript兵器库中的一把瑞士军刀。从长远来看，细心学习、 充分实践，将为你带来丰厚的长期回报。
 
 
 
