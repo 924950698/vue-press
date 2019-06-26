@@ -1,4 +1,4 @@
-# RegExp篇
+# RegExp篇一
 
 ### 创建一个Regexp的两种方式：<br >
 1. ```var reg = /regexp/``` <br >
