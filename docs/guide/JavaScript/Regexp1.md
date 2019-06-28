@@ -108,13 +108,41 @@ console.log(date.match(regex))// 输出23:59 02:07
 
 9. window 操作系统文件路径匹配
 
+**因为文件夹的名字不能是特殊字符，那么就要首先确定一个问题：js的正则中的特殊字符都有哪些？**
 
+```
+初步断定有以下几种：
+~!@#$%^&*()/\|,.<>?"'();:_+-=\[\]{}
 
+var regex = /^[a-zA-Z]:\\([^\\:*<>|"?\r\n/]+\\)*([^\\:*<>|"?\r\n/]+)?$/;
+console.log( regex.test("F:\\study\\javascript\\regex\\regular expression.pdf") );
+console.log( regex.test("F:\\study\\javascript\\regex\\") );
+console.log( regex.test("F:\\study\\javascript") );
+console.log( regex.test("F:\\") );
+// => true
+// => true
+// => true
+// => true
+```
 
+10. 匹配id
 
+```
+var string='<div id="container" class="main"></div>'
+var regex = /id=".*"/
+输出：id="container" class="main"
 
+Tips:
+	因为*是贪婪匹配，所以会一直匹配到最后一个"才结束。
+	所以，我们加一个?使用非贪婪模式来匹配即可。
 
+var string='<div id="container" class="main"></div>'
+var regex = /id=".*?"/
+输出：id="container"
+```
 
+**后记：**
+<br>这一章只记录一些基本的正则操作。
 
 
 
