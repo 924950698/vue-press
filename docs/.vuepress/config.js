@@ -24,7 +24,8 @@ module.exports = {
           children: [      
             'JavaScript/data', 
             'JavaScript/Regexp',
-            'JavaScript/Regexp1'
+            'JavaScript/Regexp1',
+            'JavaScript/Regexp2'
           ]
         },
         {
