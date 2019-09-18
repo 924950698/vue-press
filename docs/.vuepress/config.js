@@ -23,6 +23,11 @@ module.exports = {
           collapsable: false,
           children: [      
             'JavaScript/data', 
+          ]
+        },{
+          title: '正则篇',
+          collapsable: false,
+          children: [  
             'JavaScript/Regexp',
             'JavaScript/Regexp1',
             'JavaScript/Regexp2'
