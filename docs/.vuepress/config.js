@@ -1,5 +1,5 @@
 module.exports = {
-  title: '🚲 踩坑侠的--“军火库”',
+  title: '🚲 踩坑侠的--“军火库1”',
   description: 'Just playing around',
   head: [
     ['link', { rel: 'icon', href: '/images/logo.jpeg' }]
