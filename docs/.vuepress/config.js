@@ -1,5 +1,5 @@
 module.exports = {
-  title: '🚲 踩坑侠的--“军火库1”',
+  title: '🚲 踩坑侠的--“军火库”',
   description: 'Just playing around',
   head: [
     ['link', { rel: 'icon', href: '/images/logo.jpeg' }]
@@ -39,15 +39,15 @@ module.exports = {
             'JavaScript/Regexp2'
           ]
         },
-        {
-          title: 'Css篇',
-          collapsable: false,
-          children: [     
-            'Css/transition.md',//过渡
-            'Css/animation.md', //动画
-            'Css/basis.md'      //基础
-          ]
-        },
+        // {
+        //   title: 'Css篇',
+        //   collapsable: false,
+        //   children: [     
+        //     'Css/transition.md',//过渡
+        //     'Css/animation.md', //动画
+        //     'Css/basis.md'      //基础
+        //   ]
+        // },
         {
           title: 'gitLab篇',
           collapsable: false,

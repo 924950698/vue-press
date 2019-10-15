@@ -28,3 +28,16 @@
 加载js文件 ----》 <br />
 js中的react代码在浏览器端重新执行 -----》<br />
 js中的react代码接管页面操作（完毕）<br />
+
+
+
+## 6-5 renderRoutes方法实现对多级路由的支持 <br>（当页面访问/根路径开头的地址时，默认加载一级路由 Head组件）
+<b> 思考：</b><br>在Home组件和Login组件中，Head组件分别被引入了两次。如果有更多的页面都需要加载Head组件，写的代码会比较冗余。怎么解决呢？<br>这个时候，就会用到<b>多级路由</b>的概念。如下图所示：
+
+![1.jpeg](https://i.loli.net/2019/10/15/mg1M8cZLV6owyA2.jpg)
+多级路由的核心思想就是：使用react-router-config插件中的renderRoutes方法。<br>
+<b>首先渲染一级路由，当进入二级路由时，把二级路由的信息带到对应的组件里去，在App.js组件通过props.route.routes获取二级路由的信息。</b>
+
+
+
+
