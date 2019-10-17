@@ -31,24 +31,35 @@ js中的react代码接管页面操作（完毕）<br />
 
 ## 6-3 axios中的instance的使用
 ![WechatIMG7.jpeg](https://i.loli.net/2019/10/17/BJHxDisRypYEhqN.jpg)
-当前代码中，在containers/Home/store/actions.js路径的异步请求中，会有很多类似Home的组件，假如每个组件都这样发送请求不利于项目的维护性。那应该怎样解决呢？<br>
-<b>解决办法：</b>为了项目的维护性，决定创建一个接口请求的文件request.js。这里就用到了axios的instance。
+当前代码中，当前containers/Home/store/actions.js路径下发送的异步请求比较复杂，一个项目中会有很多类似Home的组件，每个组件都这样发送请求不利于项目的维护性。那应该怎样解决呢？<br>
+<b>解决办法：</b>为了项目后期的维护性，决定创建一个接口请求的文件request.js。这里就用到了axios的instance。
 先附上instance的使用说明：
 ![instance.png](https://i.loli.net/2019/10/17/CMzJgXaK942qujH.png)
 
-创建一个axios实例，baseURL参数来接收地址（以浏览器端为例，服务器端同理）：
+创建一个axios实例，baseURL参数来规定统一的前缀（以浏览器端为例，服务器端同理）：
 
 ![WechatIMG5.png](https://i.loli.net/2019/10/17/abEj2wU4FrLRyhm.png)
 
 再来看actions.js文件，代码简化，只需要根据server的值来判断调用哪个实例即可。
 ![WechatIMG6.jpeg](https://i.loli.net/2019/10/17/FNJrBj68To4iE9Q.jpg)
 
-
-
 ## 6-4 react-redux中的withExtraArgument
+还是在Home组件下的actions.js文件中，每一个请求数据的方法中都要区分是服务器发的请求还是浏览器发的请求，需要接受一个server参数（“是否为服务端”的布尔值）。再发送请求来判断当前使用的路径（服务端路径为全路径，浏览器端路径为相对路径）。<br>后期接口增多，这种办法就比较不靠谱了。那么，怎样能够简化呢？
+在Home的index.js文件中，getHomeList的请求方法分别是：
+1. 服务端时，在```Home.loadData```中发送请求，接收到返回数据时会改变服务器端的store。
+2. 浏览器端时，在```componentDidMount```中发送的请求，接收到数据后会改变浏览器端的store。
 
-需要接收“是否为服务端”的布尔值，再发送请求来判断当前使用的路径（服务端路径为全路径，浏览器端路径为相对路径）。<br>这样每个接口在浏览器端和服务器端发送请求时，都需要传值，做出判断后决定调用哪个路径，复杂且容易出错。
+此时整体流程：页面渲染时，执行Home的index走到上面的两个钩子函数，<br />```Home.loadData```去全局store中调用服务端的getStore方法；同时dispatch触发getHomeList方法。<br />接收到返回数据后传递给store，Home/index通过react-redux的mapStateToProps接收，实现数据的传递。
 
+此时在全局store中，<b>改变服务器端的store内容，一定要使用serverAxios;改变浏览器端的store内容，一定要使用clientAxios。</b>
+这时我们可以使用react-thunk中的withExtraArgument方法：
+![WechatIMG9.png](https://i.loli.net/2019/10/17/M9gF3z6b5DCxHot.png)
+
+在全局的store中添加withExtraArgument方法：
+![WechatIMG8.jpeg](https://i.loli.net/2019/10/17/DOMZoH3pfGx5qd6.jpg)
+
+在Home组件的action异步请求中可以接收到3个参数，第3个参数就是当前分别对应（服务端 / 客户端）的axios的实例：
+![WechatIMG10.jpeg](https://i.loli.net/2019/10/17/PWgjzwSKDq9nHXs.jpg)
 
 ## 6-5 renderRoutes方法实现对多级路由的支持 <br>（当页面访问/根路径开头的地址时，默认加载一级路由 Head组件）
 <b> 思考：</b><br>在Home组件和Login组件中，Head组件分别被引入了两次。如果有更多的页面都需要加载Head组件，写的代码会比较冗余。怎么解决呢？<br>这个时候，就会用到<b>多级路由</b>的概念。如下图所示：
@@ -58,4 +69,12 @@ js中的react代码接管页面操作（完毕）<br />
 <b>首先渲染一级路由，当进入二级路由时，把二级路由的信息带到对应的组件里去，在App.js组件通过props.route.routes获取二级路由的信息。</b>
 
 ## 6-6 登陆功能的制作（动态显示导航栏）
+想实现当用户登陆时可以动态显示导航栏的方法：
+在Header组件中新建一个store，在reducer中模拟接口返回状态，并将当前的
+
+
+
+
+
+
 
