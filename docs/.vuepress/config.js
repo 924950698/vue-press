@@ -30,16 +30,17 @@ module.exports = {
           children: [      
             'JavaScript/data', 
           ]
-        },{
-          title: '正则篇',
-          collapsable: false,
-          children: [  
-            'JavaScript/Regexp',
-            'JavaScript/class',
-            'JavaScript/function',
-            'JavaScript/interface',
-          ]
         },
+        // {
+        //   title: '正则篇',
+        //   collapsable: false,
+        //   children: [  
+        //     'JavaScript/Regexp',
+        //     'JavaScript/class',
+        //     'JavaScript/function',
+        //     'JavaScript/interface',
+        //   ]
+        // },
         {
           title: 'typeScript篇',
           collapsable: false,
