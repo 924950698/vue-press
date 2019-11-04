@@ -35,19 +35,21 @@ module.exports = {
           collapsable: false,
           children: [  
             'JavaScript/Regexp',
-            'JavaScript/Regexp1',
-            'JavaScript/Regexp2'
+            'JavaScript/class',
+            'JavaScript/function',
+            'JavaScript/interface',
           ]
         },
-        // {
-        //   title: 'Css篇',
-        //   collapsable: false,
-        //   children: [     
-        //     'Css/transition.md',//过渡
-        //     'Css/animation.md', //动画
-        //     'Css/basis.md'      //基础
-        //   ]
-        // },
+        {
+          title: 'typeScript篇',
+          collapsable: false,
+          children: [     
+            'typeScript/types.md',
+            'typeScript/interface.md',
+            'typeScript/class.md',
+            'typeScript/function.md',
+          ]
+        },
         {
           title: 'gitLab篇',
           collapsable: false,
