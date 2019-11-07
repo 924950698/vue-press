@@ -89,7 +89,7 @@ module.exports = {
       ]
     } 
   },
-  markdown: { // markdown 插入代码时展示对应行数
+  markdown: {  // markdown 插入代码时展示对应行数
     lineNumbers: true
   }
 }
