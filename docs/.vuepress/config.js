@@ -67,7 +67,15 @@ module.exports = {
             'React/trialError', //React试错篇
             'React/hooks'       //React-Hooks篇  
           ]
-        },{
+        },
+        // {
+        //   title: '小程序篇',
+        //   collapsable: false,
+        //   children: [      
+        //     'miniProgress/performance', //微信小程序性能优化篇
+        //   ]
+        // },
+        {
           title: 'Https篇',
           collapsable: false,
           children: [      
@@ -79,13 +87,14 @@ module.exports = {
           children: [      
             'Linux/fire', 
           ]
-        },{
-          title: 'Experience篇',
-          collapsable: false,
-          children: [      
-            'Experience/experience', 
-          ]
         },
+        // {
+        //   title: 'Experience篇',
+        //   collapsable: false,
+        //   children: [      
+        //     'Experience/experience', 
+        //   ]
+        // },
       ]
     } 
   },
