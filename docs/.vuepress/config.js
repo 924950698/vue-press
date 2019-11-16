@@ -50,6 +50,12 @@ module.exports = {
             'typeScript/class.md',
             'typeScript/function.md',
           ]
+        },{
+          title: '前端自动化篇',
+          collapsable: false,
+          children: [      
+            'autoTest/lesson1', 
+          ]
         },
         {
           title: 'gitLab篇',
