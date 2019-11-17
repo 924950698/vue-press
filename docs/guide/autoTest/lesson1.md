@@ -78,5 +78,45 @@
 
 
 ### 2. 集成测试 
-
 ### 3. End to End (端到端测试)
+
+## 三、使用Jest测试框架（完成第二部分的代码迁移）
+1. npm init生成包工具，下载jest@14.8.0版本,package.json中script命令test替换为jest
+2. 将math.js作为一个模块导出，
+```
+    function add(a, b) {
+        return a + b;
+    }
+
+    function minus(a, b) {
+        return a - b;
+    }
+
+
+    module.exports = {
+        add,
+        minus
+    }
+
+```
+3. 在math.test.js中引入模块：
+```
+    const math = require("./math.js");
+    const { add, minus } = math;
+
+    test('测试加法 3 + 7', () => {
+        expect(add(3, 7)).toBe(10)
+    })
+
+    test('测试减法 3 - 3', () => {
+        expect(minus(3, 3)).toBe(0)
+    })
+```
+
+4. 运行命令： npm run test ，运行正确时结果如下图：
+![微信图片_20191117125438.png](https://i.loli.net/2019/11/17/FB8dlSRgC7hcyxI.png)
+<br>运行报错时如下图：
+![](https://i.loli.net/2019/11/17/CfjDyQUrh8e76OJ.png)
+
+5. 为什么math.js导出的需要时一个模块？<br>
+因为jest框架在前端帮助我们完成的是两类的内容：单元测试（单个模块测试）， 集成测试（多个模块测试）；必须要把math.js改造成一个模块，才能符合jest两大测试类型的要求。
