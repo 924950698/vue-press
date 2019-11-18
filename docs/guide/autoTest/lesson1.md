@@ -144,5 +144,7 @@
         }]
     ]
 ```
-含义：当前node环境不支持import语句，使用```@babel/preset-env```对import语句进行转换，转换成commenJS语法，node和Jest就可以识别了。
+含义：当前node环境不支持import语句，使用```@babel/preset-env```对import语句进行转换，转换成commenJS语法，node和Jest就可以识别了。<br>
 6. 执行npm run jest后，jest内部集成了babel-jest插件，它会检测当前环境是否安装了babel-core，<br>如果有，就会去取.babelre配置。<br>在运行测试之前，结合babel，先把代码做一次转换<br>运行转化过的测试用例，就符合commonJs规范
+
+7. 大家如果想了解更多，可以去[Jest官网](https://jestjs.io/docs/en/getting-started.html)看一下，有详细的配置介绍说明和与ts的结合。
