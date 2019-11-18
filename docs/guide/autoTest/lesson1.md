@@ -1,14 +1,13 @@
-# 前端自动化
+# 前端自动化【[源码链接](https://github.com/924950698/autoTest)】
 
-## 1-1、 简介：什么是前端自动化？
+## 1-1 简介：什么是前端自动化？
 防止bug产；带到线上造成更大的损失；<br>当前市场上流行的TypeScript， Eslint， flow， styleLint可以帮助我们提高代码质量，但是还不够。作为前端，前端自动化测试可以帮助我们提高代码的质量。自动化测试在后端已经比较普遍了，但是在前端普及的还比较少。<br>本次只作3种测试的讲解：
 1. 单元测试 (白盒-知道代码逻辑，写代码来测试；测试方法函数)(注：黑盒测试：不知道代码逻辑，通过点击功能去测试)
 2. 集成测试 
 3. End to End (端到端测试)
 
-## 2-1、 正文
-
-### 1. 单元测试  【[源码链接]()】
+## 2-2 正文: 自动化测试原理
+### 1. 单元测试
 1. 创建index.html，math.js, math.test.js三个文件
 2. 在math.js中创建两个函数方法，并在index.html中引入math.js
 ```
@@ -80,7 +79,7 @@
  2. 集成测试 
  3. End to End (端到端测试)
 
-## 2-3、使用Jest修改自动化测试样例
+## 2-3 使用Jest修改自动化测试样例
 1. npm init生成包工具，下载jest@14.8.0版本,package.json中script命令test替换为jest
 2. 将math.js作为一个模块导出，
 ```
@@ -131,18 +130,19 @@
 
 会生成一个coverage目录，该目录下有一个index.html文件。打开该文件后，可以直观的看到当前代码覆盖率是100%，
 ![微信图片_20191118155556.png](https://i.loli.net/2019/11/18/YNeUnKuBPXT5F3o.png)
-3. jest.config.js中的coverageDirectory可以更改打包报告目录的名字。
-另外也可以在package.json中将命令替换成```coverage: jest --coverage```,之后在执行npm run coverage就生产code测试报告了。
-4. 在项目中使用EsModule语法对模块进行导出和使用，但是在node环境下不支持，需要使用babel转成commonJs的代码。
+3. jest.config.js中的coverageDirectory可以更改打包报告目录的名字。另外也可以在package.json中将命令替换成```coverage: jest --coverage```,之后在执行npm run coverage就生产code测试报告了。<br>
+4. 在项目中使用Esmodule语法对模块进行导出和使用，但是在node环境下不支持，需要使用babel转成commonJs的代码。<br>
 5. 下载babel版本：```npm install @babel/core@7.4.5 @babel/preset-env@7.4.5 -D```。使用babel时对babel进行配置，创建.babelrc文件，在里面写
 ```
-    "persets": [
+{
+    "presets": [
         ["@babel/preset-env", {
             "targets": {
                 "node": "current"
             }
         }]
     ]
+}
 ```
 含义：当前node环境不支持import语句，使用```@babel/preset-env```对import语句进行转换，转换成commenJS语法，node和Jest就可以识别了。<br>
 6. 执行npm run jest后，jest内部集成了babel-jest插件，它会检测当前环境是否安装了babel-core，<br>如果有，就会去取.babelre配置。<br>在运行测试之前，结合babel，先把代码做一次转换<br>运行转化过的测试用例，就符合commonJs规范
