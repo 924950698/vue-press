@@ -148,3 +148,104 @@
 6. 执行npm run jest后，jest内部集成了babel-jest插件，它会检测当前环境是否安装了babel-core，<br>如果有，就会去取.babelre配置。<br>在运行测试之前，结合babel，先把代码做一次转换<br>运行转化过的测试用例，就符合commonJs规范
 
 7. 大家如果想了解更多，可以去[Jest官网](https://jestjs.io/docs/en/getting-started.html)看一下，有详细的配置介绍说明和与ts的结合。
+
+## 2-5 Jest中的匹配器
+1. 删除math.js; math.test.js改名字为matchers.test.js并只保留一个测试用例。( ```--watchAll```监视代码改动，自动执行)
+### 常用的类型匹配器
+2. toBe 是匹配器 matchers 类似 object.is === 
+```
+//假如用toBe测试以下内容：
+ test('测试对象a与对象a相等', {
+     const a = {a: 1};
+     expect(a).toBe({a: 1});
+ })
+
+ // 这里由于指向的地址不一样，所以会报错。类似toBe()这种匹配器有很多种，下面介绍一下
+```
+3. toEqual () 只匹配内容，不匹配引用
+4. toBeNull() 可以用来匹配null, undefined; 布尔类型
+5. toBeUndefined() 前者匹配a是未定义的； toBeDefined() 后者匹配a是定义过的
+6. toBeTruthy() 匹配a是否为真； toBeFalsy()匹配a是否为假
+7. not() 取反匹配器
+```
+ test('not匹配器', {
+    const a = 1;
+    expect(a).not.toBeFalsy();
+    expect(a).toBeTruthy();
+ })
+
+ // a取false的反值，就相当于a为true
+```
+8. Jest中有很多这种匹配器，我们不需要都记住，只需要记住其中核心的几个匹配器即可。
+### 常用的数字相关的匹配器：
+1. toBeGreaterThan()  匹配count比期望值大
+```
+test('toBeGreaterThan', {
+    const count = 10;
+    expect(count).toBeGreaterThan(9);
+})
+
+//匹配count比期望值9大
+```
+2. toBeLessThan() 匹配count比期望值小
+3. toBeGreaterThanOrEqual() 匹配count大于等于期望值
+``` 
+test('toBeGreaterThanOrEqual', {
+    const count = 10;
+    expect(count).toBeGreaterThanOrEqual(10);
+})
+
+// 通过
+```
+4. toBeLessThanOrEqual() 匹配count小于等于期望值
+5. toBeCloseTo() 匹配浮点数相加减的运算
+```
+test('toBeCloseTo', {
+    const a = 0.1;
+    const b = 0.2;
+    expect(a+ b).toBeCloseTo(0.3);
+})
+
+// 通过，在js中存在浮点数溢出的情况，不能用toEqual()
+```
+
+### 常用的字符串相关的匹配器
+1. toMathch() 匹配变量中是否包含某个字符串
+```
+test('toBeCloseTo', {
+    const str = 'http://www.Allan-Liu.com';
+    expect(str).toBeMatch('Allan-Liu');//通过
+    expect(str).toBeMatch(/Allan-Liu/);//通过
+    expect(str).toBeMatch(/AllanLiu/); //失败
+})
+```
+
+### 常用的数组相关的匹配器
+1. toContain() 匹配数组中是否包含某一项 （比较常用）
+```
+test('toContain', {
+    const arr = ['www', 'Allan', 'Liu'];
+    // 或者 const arr1 = new Set(arr); 结果都是一样的（set和数组不同之处：元素都是唯一） 
+    expect(arr).toContain('Allan');//通过
+    expect(arr).toContain(/AllanLiu/); //失败
+})
+```
+
+### 常用的处理异常情况的匹配器
+1. toThrow()
+```
+const throwNewErrorFunc = () => {
+    Throw new Error('this is a new error');
+}
+
+test('toThrow', {
+    expect(throwNewErrorFunc).toThrow() // 通过
+    expect(throwNewErrorFunc).toThrow('this is a new error') // 通过
+    expect(throwNewErrorFunc).toThrow('aaa') // 失败，必须要一致
+    expect(throwNewErrorFunc).toThrow(/this is a new error/) // 通过，正则也是可以的
+})
+
+//throwNewErrorFunc()是异常函数，toThrow()与该函数匹配
+```
+
+#### 以上并不是Jest中全部的匹配器，了解详情请戳[Jest官网](https://jestjs.io/docs/en/using-matchers)，了解更多请戳[Jest官网](https://jestjs.io/docs/zh-Hans/expect)
