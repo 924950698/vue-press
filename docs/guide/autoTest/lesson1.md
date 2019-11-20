@@ -238,7 +238,7 @@ const throwNewErrorFunc = () => {
     Throw new Error('this is a new error');
 }
 
-test('toThrow', {
+test('toThrow', {   
     expect(throwNewErrorFunc).toThrow() // 通过
     expect(throwNewErrorFunc).toThrow('this is a new error') // 通过
     expect(throwNewErrorFunc).toThrow('aaa') // 失败，必须要一致
@@ -249,3 +249,15 @@ test('toThrow', {
 ```
 
 #### 以上并不是Jest中全部的匹配器，了解详情请戳[Jest官网](https://jestjs.io/docs/en/using-matchers)，了解更多请戳[Jest官网](https://jestjs.io/docs/zh-Hans/expect)
+
+## 2-6 Jest命令行工具的使用
+1. 用命令行启动vscode，在`ctrl+shift+p`中搜索下载install code command in PATH。如果搜不到有可能已经添加完成了。如下图：<br>
+![微信图片_20191119122327.png](https://i.loli.net/2019/11/19/tHrxfmj8Vw2okMG.png)
+2. 运行npm run test时， 命令行一些按键的作用： （必须是使用git代码管理，Jest才知道哪些是改变的文件） <br >
+f: 只测试之前没有通过的用例，通过的不在测试。再次点击f退出模式<br >
+a: 任何一个测试文件发生了改变，运行所有的测试用例<br >
+o: 当更改一个文件的时候，只运行这个文件里的测试用例<br >
+t: 过滤模式，输入一个单词，执行以该单词结尾的用例<br >
+q: 退出对代码的监控<br >
+Enter：按回车重新运行测试 <br >
+p: 筛选， 文件发生改变时，根据文件名称匹配关键词<br >
