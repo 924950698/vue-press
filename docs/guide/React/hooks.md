@@ -15,7 +15,7 @@ function Example() {
   // 声明一个叫 “count” 的 state 变量
   const [count, setCount] = useState(0);
 ```
-等号左边名字并不是 React API 的部分，你可以自己取名字<br>
+等号左边名字并不是 React API 的部分，数组解构,你可以自己取名字<br>
 ```
 const [fruit, setFruit] = useState('banana');
 ```

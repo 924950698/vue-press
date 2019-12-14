@@ -25,6 +25,12 @@ module.exports = {
             'writePart/write'
           ]
         },{
+          title: '算法篇',
+          collapsable: false,
+          children: [  
+            'arithmetic/array'
+          ]
+        },{
           title: 'JavaScript篇',
           collapsable: false,
           children: [      

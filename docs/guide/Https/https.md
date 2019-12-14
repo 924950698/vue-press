@@ -24,3 +24,6 @@ Http协议又为超文本传输协议（不保存状态，无状态协议）。W
        
 ###  http协议包括什么？（ 两部分：请求和响应）
 ![WechatIMG9.png](https://i.loli.net/2019/08/28/erMhb7PuOSspiYK.png)
+
+ 
+ 
