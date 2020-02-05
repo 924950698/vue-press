@@ -213,17 +213,27 @@ var intersect = function(nums1, nums2) {
 ```
 var plusOne = function(digits) {
     const len = digits.length;
-    for(let i = len - 1; i >= 0; i--) {
+    for(let i = len - 1; i >= 0; i--) {        // 末尾+1，倒序执行
         digits[i]++;
-        digits[i] %= 10;
-        if(digits[i]!=0)
+        digits[i] %= 10;                       // 求运算后的余数。如果上一步的digits[i] ++ 为10 ，则这一步的digits[i]为0
+        if(digits[i] != 0)                     // 判断运算后的余数是否为0，不是则直接返回该数组
             return digits;
     }
-    digits = [...Array(len + 1)].map(_=>0);;
-    digits[0] = 1;
+    digits = [...Array(len + 1)].map(_=>0);     // 数组中的每一个元素都替换为0
+    digits[0] = 1;                              // 第一个元素替换为1
     return digits;
-
-
 };
+
+/*
+
+    难点：这里并没有用类型转换。
+    不涉及到末位为9的数字时，可以正常加减。 当有一位为9时，需要执行前一位进1时，则不满足。
+    1. [...Array(len + 1)].map(_=>0)是将数组中的每一项替换为0。
+    2. len+1 则是执行+1操作时，需要补位的操作。99 + 1= 100
+    3. Array(size) 创建一个长度为size的数组，此时每一项元素为undefied；遍历则是将每一项替换为0
+    4. 当函数作为构造函数被调用时，new Array()的new可以省略，效果不变。
+    5. [...Array()]则是将其继续存到数组中
+
+*/ 
 
 ```
