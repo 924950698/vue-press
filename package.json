@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "docs:dev": "vue press dev docs",
+    "docs:build": "vue press build docs",
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
