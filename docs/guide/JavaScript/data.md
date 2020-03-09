@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 
-## JavaScript基础知识
+## JavaScript知识总结篇
 
 ### 原始类型
 ::: tip
