@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 
-## JavaScript基础知识面试题
+## JavaScript基础知识
 
 ### 原始类型
 ::: tip
@@ -2088,23 +2088,3 @@ CSRF防御有如下几种方式：
 CDN的原理是尽可能的在各地部署机房缓存数据，这样即使主服务器在国外，国内的用户可能通过国内的机房快速进行访问。
 
 ![CDN分布式缓存](../images/interview/13.png)
-
-## HTTP相关面试题
-
-### TCP和UDP
-
-### HTTP组成及TLS
-
-### HTTP2.0和HTTP3.0
-
-## 常见设计模式面试题
-强烈建议阅读[JavaScript设计模式与开发实践](/designPattern/)
-
-## 常见数据结构和算法面试题
-推荐阅读[常见数据结构和算法](/algorithm/)
-
-## CSS面试题
-本部分只列举CSS概念部分，实战部分请点击[CSS奇淫技巧](/css/)
-
-## Vue相关面试题
-强烈建议阅读[Vue模块](/vue/)

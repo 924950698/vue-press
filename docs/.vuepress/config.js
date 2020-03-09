@@ -25,16 +25,22 @@ module.exports = {
             'writePart/write'
           ]
         },{
-          title: '算法篇',
-          collapsable: false,
-          children: [  
-            'arithmetic/array'
-          ]
-        },{
           title: 'JavaScript篇',
           collapsable: false,
           children: [      
             'JavaScript/data', 
+          ]
+        },{
+          title: '前端性能篇',
+          collapsable: false,
+          children: [     
+            'performanceOptimization/performanceOptimization.md'
+          ]
+        },{
+          title: '算法篇',
+          collapsable: false,
+          children: [  
+            'arithmetic/array'
           ]
         },
         // {
@@ -75,9 +81,9 @@ module.exports = {
           collapsable: false,
           children: [      
             'React/React-SSR', //React服务端渲染   
-            'React/baseSkill',  //React基础技能篇
-            'React/trialError', //React试错篇
-            'React/hooks'       //React-Hooks篇  
+            // 'React/baseSkill',  //React基础技能篇
+            // 'React/trialError', //React试错篇
+            // 'React/hooks'       //React-Hooks篇  
           ]
         },
         // {
