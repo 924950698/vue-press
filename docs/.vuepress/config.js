@@ -19,12 +19,6 @@ module.exports = {
             'install/test',   // 可在docs目录下创建install目录，此路径表示读取install目录下的README.md文件
           ]
         },{
-          title: '手写实现篇',
-          collapsable: false,
-          children: [  
-            'writePart/write'
-          ]
-        },{
           title: 'JavaScript篇',
           collapsable: false,
           children: [      
@@ -34,7 +28,10 @@ module.exports = {
           title: '前端性能篇',
           collapsable: false,
           children: [     
-            'performanceOptimization/performanceOptimization.md'
+            'performanceOptimization/foreword.md',
+            'performanceOptimization/netWork1.md',
+            'performanceOptimization/netWork2.md',
+            'performanceOptimization/localstorage.md',
           ]
         },{
           title: '算法篇',
@@ -42,18 +39,7 @@ module.exports = {
           children: [  
             'arithmetic/array'
           ]
-        },
-        // {
-        //   title: '正则篇',
-        //   collapsable: false,
-        //   children: [  
-        //     'JavaScript/Regexp',
-        //     'JavaScript/class',
-        //     'JavaScript/function',
-        //     'JavaScript/interface',
-        //   ]
-        // },
-        {
+        },{
           title: 'typeScript篇',
           collapsable: false,
           children: [     
@@ -68,14 +54,6 @@ module.exports = {
           children: [      
             'autoTest/lesson1', 
           ]
-        },
-        {
-          title: 'gitLab篇',
-          collapsable: false,
-          children: [      
-            'gitLab/gitLab',  
-            'gitLab/gitHub'
-          ]
         },{
           title: 'React篇',
           collapsable: false,
@@ -85,15 +63,7 @@ module.exports = {
             // 'React/trialError', //React试错篇
             // 'React/hooks'       //React-Hooks篇  
           ]
-        },
-        // {
-        //   title: '小程序篇',
-        //   collapsable: false,
-        //   children: [      
-        //     'miniProgress/performance', //微信小程序性能优化篇
-        //   ]
-        // },
-        {
+        },{
           title: 'Https篇',
           collapsable: false,
           children: [      
@@ -105,7 +75,40 @@ module.exports = {
           children: [      
             'Linux/fire', 
           ]
+        },{
+          title: 'gitLab篇',
+          collapsable: false,
+          children: [      
+            'gitLab/gitLab',  
+            'gitLab/gitHub'
+          ]
         },
+        // {
+        //   title: '手写实现篇',
+        //   collapsable: false,
+        //   children: [  
+        //     'writePart/write'
+        //   ]
+        // },
+        // {
+        //   title: '正则篇',
+        //   collapsable: false,
+        //   children: [  
+        //     'JavaScript/Regexp',
+        //     'JavaScript/class',
+        //     'JavaScript/function',
+        //     'JavaScript/interface',
+        //   ]
+        // },
+        
+        // {
+        //   title: '小程序篇',
+        //   collapsable: false,
+        //   children: [      
+        //     'miniProgress/performance', //微信小程序性能优化篇
+        //   ]
+        // },
+        
         // {
         //   title: 'Experience篇',
         //   collapsable: false,
