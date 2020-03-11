@@ -31,7 +31,8 @@ module.exports = {
             'performanceOptimization/foreword.md',
             'performanceOptimization/netWork1.md',
             'performanceOptimization/netWork2.md',
-            'performanceOptimization/localstorage.md',
+            'performanceOptimization/localstorage1.md', // Http优化
+            'performanceOptimization/localstorage2.md', // 本地存储优化
           ]
         },{
           title: '算法篇',
