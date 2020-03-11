@@ -1,6 +1,7 @@
 # gitHub 
 
 ## gitHub小绿点不出现的问题
+
 ### 解决办法：
 1. git config user.name 查看本地项目的用户名 <br />
   git config user.email  查看本地项目的邮箱

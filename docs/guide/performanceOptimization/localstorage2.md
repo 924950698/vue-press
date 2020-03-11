@@ -1,6 +1,8 @@
-# 存储篇优化-本地存储
+
+# 存储篇优化-本地缓存
 
 ![微信图片_20200311085822.png](https://i.loli.net/2020/03/11/qj3f6rEitGD5T4C.png)
+
 
 <b> 前言： 从 Cookie 到 Web Storage、IndexedDB </b>
 

@@ -1,9 +1,8 @@
-# Linux下的性能监控 -- 火焰图
+# 火焰图 -- Linux下的性能监控
 
-## 大家先看效果图：
+<b> 大家先看效果图： </b>
 ![](https://i.loli.net/2019/06/17/5d07adc78257730405.png)
 
-## 正文：
 [博客传送门](https://blog.csdn.net/gatieme/article/details/78885908)
 
 1. 先查看Linux系统版本: ```cat /etc/centos-release```

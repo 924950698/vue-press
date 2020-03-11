@@ -1,5 +1,5 @@
 module.exports = {
-  title: '🚲 踩坑侠的--“军火库”',
+  title: '🚲 Allan_Liu的博客',
   description: 'Just playing around',
   head: [
     ['link', { rel: 'icon', href: '/images/logo.jpeg' }]
@@ -35,21 +35,6 @@ module.exports = {
             'performanceOptimization/localstorage2.md', // 本地存储优化
           ]
         },{
-          title: '算法篇',
-          collapsable: false,
-          children: [  
-            'arithmetic/array'
-          ]
-        },{
-          title: 'typeScript篇',
-          collapsable: false,
-          children: [     
-            'typeScript/types.md',
-            'typeScript/interface.md',
-            'typeScript/class.md',
-            'typeScript/function.md',
-          ]
-        },{
           title: '前端自动化篇',
           collapsable: false,
           children: [      
@@ -65,42 +50,39 @@ module.exports = {
             // 'React/hooks'       //React-Hooks篇  
           ]
         },{
-          title: 'Https篇',
+          title: '算法篇',
           collapsable: false,
-          children: [      
-            'Https/https', //网络协议篇
+          children: [  
+            'arithmetic/array'
           ]
         },{
-          title: 'Linux篇',
+          title: 'typeScript篇',
           collapsable: false,
-          children: [      
-            'Linux/fire', 
+          children: [     
+            'typeScript/types.md',
+            'typeScript/interface.md',
+            'typeScript/class.md',
+            'typeScript/function.md',
           ]
         },{
-          title: 'gitLab篇',
+          title: '正则篇',
+          collapsable: false,
+          children: [  
+            'regexp/Regexp',
+            'regexp/Regexp1',
+            'regexp/Regexp2',
+          ]
+        },{
+          title: '杂记录篇',
           collapsable: false,
           children: [      
-            'gitLab/gitLab',  
-            'gitLab/gitHub'
+            'jottings/https', //网络协议篇
+            'jottings/fire',  // 火焰图
+            'jottings/gitLab',  
+            'jottings/gitHub',
+            'jottings/write',
           ]
         },
-        // {
-        //   title: '手写实现篇',
-        //   collapsable: false,
-        //   children: [  
-        //     'writePart/write'
-        //   ]
-        // },
-        // {
-        //   title: '正则篇',
-        //   collapsable: false,
-        //   children: [  
-        //     'JavaScript/Regexp',
-        //     'JavaScript/class',
-        //     'JavaScript/function',
-        //     'JavaScript/interface',
-        //   ]
-        // },
         
         // {
         //   title: '小程序篇',
