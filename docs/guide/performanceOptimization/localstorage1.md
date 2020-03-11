@@ -18,7 +18,7 @@
 
 <h3> 强缓存的特征 </h3>
 
-强缓存是利用 http 头中的 <b><font color=red size=4> Expires 和 Cache-Control </font></b> 两个字段来控制的。强缓存中，当请求再次发出时，浏览器会根据其中的 expires 和 cache-control 判断目标资源是否“命中”强缓存，若命中则直接从缓存中获取资源，不会再与服务端发生通信。
+强缓存是利用 http 头中的 <b><font color=red size=4> Expires 和 Cache-Control </font></b> 两个字段来控制的。强缓存中，当请求再次发出时，浏览器会根据其中的 expires 和 cache-control 判断目标资源是否“命中”强缓存，若命中则直接从缓存中获取资源，<b>不会再与服务端发生通信。</b>
 
 <br>命中强缓存的情况下，返回的 HTTP 状态码为 200 （如下图）。
 ![微信图片_20200310141642.png](https://i.loli.net/2020/03/10/4Dsx13dQkgcpjKf.png)

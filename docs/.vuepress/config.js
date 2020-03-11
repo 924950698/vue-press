@@ -33,6 +33,7 @@ module.exports = {
             'performanceOptimization/netWork2.md',
             'performanceOptimization/localstorage1.md', // Http优化
             'performanceOptimization/localstorage2.md', // 本地存储优化
+            'performanceOptimization/cdn.md', 
           ]
         },{
           title: '前端自动化篇',
