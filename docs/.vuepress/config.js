@@ -5,7 +5,18 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/images/logo.jpeg' }]
   ],
-  plugins: ['@vuepress/back-to-top'],
+  plugins: [
+    '@vuepress/back-to-top',
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-160416965-1' // UA-00000000-0
+      }
+    ],
+    '@vuepress/medium-zoom',
+
+    
+  ],
   themeConfig: {
   	repo: '924950698',// 默认是 false, 设置为 true 来启用，右上角会出现 github 跳转链接
   	lastUpdated: 'Last Updated', // 每个文档展示最近更新时间
@@ -83,7 +94,7 @@ module.exports = {
             'jottings/fire',  // 火焰图
             'jottings/gitLab',  
             'jottings/gitHub',
-            'jottings/write',
+            // 'jottings/write',
           ]
         },
 

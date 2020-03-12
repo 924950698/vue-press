@@ -1,4 +1,4 @@
-# <h1 id="react">React-SSR 服务器端渲染 【[源码链接](https://github.com/924950698/React-SSR)】<h1>
+# React-SSR 服务器端渲染 【[源码链接](https://github.com/924950698/React-SSR)】
 
 ## 一 React-SSR 和 React-CSR（浏览器端渲染）区别：
 1. 服务器端渲染：在服务器端生成HTML，浏览器端直接渲染。
