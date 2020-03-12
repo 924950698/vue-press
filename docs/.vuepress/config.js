@@ -34,6 +34,9 @@ module.exports = {
             'performanceOptimization/localstorage1.md', // Http优化
             'performanceOptimization/localstorage2.md', // 本地存储优化
             'performanceOptimization/cdn.md', 
+            'performanceOptimization/render.md',
+            'performanceOptimization/application1.md',
+            'performanceOptimization/application2.md',
           ]
         },{
           title: '前端自动化篇',

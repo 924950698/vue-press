@@ -1,5 +1,4 @@
-
-# 存储篇优化-本地缓存
+# 存储篇优化 - 本地缓存
 
 <b> 前言： 从 Cookie 到 Web Storage、IndexedDB </b>
 
