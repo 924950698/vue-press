@@ -30,9 +30,12 @@ module.exports = {
             'performanceOptimization/localstorage1.md', // Http优化
             'performanceOptimization/localstorage2.md', // 本地存储优化
             'performanceOptimization/cdn.md', 
-            'performanceOptimization/render.md',
             'performanceOptimization/application1.md',
             'performanceOptimization/application2.md',
+            'performanceOptimization/render1.md',
+            'performanceOptimization/render2.md',
+            'performanceOptimization/render3.md',
+            'performanceOptimization/render4.md',
           ]
         },{
           title: '前端自动化篇',
@@ -93,13 +96,6 @@ module.exports = {
         //   ]
         // },
         // {
-        //   title: '小程序篇',
-        //   collapsable: false,
-        //   children: [      
-        //     'miniProgress/performance', //微信小程序性能优化篇
-        //   ]
-        // },
-        
         // {
         //   title: 'Experience篇',
         //   collapsable: false,
