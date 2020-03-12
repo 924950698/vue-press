@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/logo.jpeg
-actionText: Get Started →
+heroImage: /images/yulong.jpg
+actionText: 进去瞧瞧 →
 actionLink: /guide/
 ---
