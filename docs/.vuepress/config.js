@@ -45,8 +45,8 @@ module.exports = {
             'performanceOptimization/application2.md',
             'performanceOptimization/render1.md',
             'performanceOptimization/render2.md',
-            'performanceOptimization/render3.md',
-            'performanceOptimization/render4.md',
+            // 'performanceOptimization/render3.md',
+            // 'performanceOptimization/render4.md',
           ]
         },{
           title: '前端自动化篇',
