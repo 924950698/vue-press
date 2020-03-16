@@ -49,6 +49,13 @@ module.exports = {
             // 'performanceOptimization/render4.md',
           ]
         },{
+          title: 'Angular篇',
+          collapsable: false,
+          children: [
+            'angular/angular1.md',
+            'angular/angular2.md',
+          ]
+        },{
           title: '前端自动化篇',
           collapsable: false,
           children: [      
