@@ -54,6 +54,11 @@ module.exports = {
           children: [
             'angular/angular1.md',
             'angular/angular2.md',
+            'angular/angular3.md',
+            'angular/angular4.md',
+            'angular/angular5.md',
+            // 'angular/angular6.md',
+            'angular/angular7.md',
           ]
         },{
           title: '前端自动化篇',

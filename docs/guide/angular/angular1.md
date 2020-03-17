@@ -1,4 +1,4 @@
-# Angular 基础配置
+# Angular 基础配置  (1-1)
 
 <b> 1. 安装angular</b>
 
