@@ -1,4 +1,4 @@
-# Angualr 动画
+# Angualr 动画 （3-1）
 
 <b> Animate 函数 </b>
 
