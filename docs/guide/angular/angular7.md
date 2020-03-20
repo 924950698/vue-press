@@ -13,7 +13,6 @@
 
 <h3>2. 依赖注入的两种方式： </h3>
 
-<b> 默认方式(useClass)： </b>
 
  <b>起因：</b> Products 组件里面放了product相关的各种信息，
 但是这些信息不是被这个组件独享的，
@@ -33,14 +32,32 @@
 
 <b>4. 依赖注入的另一种方式：(局部配置)</b> 在当前组件的```@Component({})``` 中注入 ``` providers:[ ProductService ] ```
 
-注意：该种注入别的组件无法使用。
+<b> 注意： 
+1. 该种注入别的组件无法使用。
+2. 组件注入的优先级高于全局注入的优先级
+</b>
 
 
 
+<b> 默认方式(useClass)： </b>
+
+此时，假如productService升级，app.module.ts中随之改变：
+
+```
+providers: [
+    {
+        provide: ProductService,      // services的标识符
+        useClass: OtherProductService  //  provide的具体注入值， 注入名称依然是ProductService 
+    }
+]
+```
 
 
 
 <b> 工程模式(useFactory): </b>
+
+
+
 
 <b> 参数订阅 和 参数快照 </b>
 
