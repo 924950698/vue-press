@@ -8,7 +8,7 @@ npm i -g @angular/cli
 
 查看angular
 
-```
+```useFactory：
 ng --version
 ```
 

@@ -13,7 +13,6 @@
 
 <h3>2. 依赖注入的两种方式： </h3>
 
-
  <b>起因：</b> Products 组件里面放了product相关的各种信息，
 但是这些信息不是被这个组件独享的，
 我们想到这些组件是公共的，我们应该把它放到service里。
@@ -32,12 +31,10 @@
 
 <b>4. 依赖注入的另一种方式：(局部配置)</b> 在当前组件的```@Component({})``` 中注入 ``` providers:[ ProductService ] ```
 
-<b> 注意： 
-1. 该种注入别的组件无法使用。
+::: tip 关于 局部注入（组件注入）的注意：
+1. 组件注入方式别的组件无法使用。
 2. 组件注入的优先级高于全局注入的优先级
-</b>
-
-
+::: 
 
 <b> 默认方式(useClass)： </b>
 
@@ -52,19 +49,41 @@ providers: [
 ]
 ```
 
-
-
 <b> 工程模式(useFactory): </b>
 
+```
+providers: [
+    {
+        provide: TestService,    
+        useFactory: factoryFunc  
+    }
+]
+```
 
+<b> 与useClass的区别：需要手动创建 factoryFunc 函数， 给到 useFactory </b>
+
+```
+
+// 传入的参数不同，返回的值不同。像一个工厂
+export const factoryFunc = () => {  
+    return new TestService();
+}
+
+```
 
 
 <b> 参数订阅 和 参数快照 </b>
 
 一旦当前页面被执行，就可以从constructor中依赖注入的变量中取参数，两种方式。参数订阅 和 参数快照。
 
+<b>
+
 订阅：时时更新
 
 快照：某一时刻的照片，不会时时更新
 
-route.snapshot.params.id 
+</b>
+
+
+
+

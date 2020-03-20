@@ -84,7 +84,8 @@ module.exports = {
         },{
           title: 'typeScript篇',
           collapsable: false,
-          children: [     
+          children: [   
+            'typeScript/foreword.md',
             'typeScript/types.md',
             'typeScript/interface.md',
             'typeScript/class.md',
