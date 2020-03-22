@@ -8,7 +8,8 @@
 3. Angular全面采用 TypeScript
 4. 兼容所有js代码
 
-<h3> 什么是TypeScript ？</h3>
+<h3> 为什么会有TypeScript ？</h3>
 
-
+JS过于灵活，技术不可控制。
+希望前端后端化
 

@@ -52,6 +52,7 @@ module.exports = {
           title: 'Angular篇',
           collapsable: false,
           children: [
+            'angular/install.md',
             'angular/angular1.md',
             'angular/angular2.md',
             'angular/angular3.md',
@@ -59,6 +60,7 @@ module.exports = {
             'angular/angular5.md',
             // 'angular/angular6.md',
             'angular/angular7.md',
+            'angular/angular8.md',
           ]
         },{
           title: '前端自动化篇',
