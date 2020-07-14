@@ -58,7 +58,6 @@ module.exports = {
             'angular/angular3.md',
             'angular/angular4.md',
             'angular/angular5.md',
-            // 'angular/angular6.md',
             'angular/angular7.md',
             'angular/angular8.md',
           ]
@@ -93,6 +92,13 @@ module.exports = {
             'typeScript/class.md',
             'typeScript/function.md',
           ]
+        },
+        {
+            title: 'Docker篇',
+            collapsable: false,
+            children: [      
+              'Docker/docker1',
+            ]
         },{
           title: '正则篇',
           collapsable: false,
@@ -109,7 +115,6 @@ module.exports = {
             'jottings/fire',  // 火焰图
             'jottings/gitLab',  
             'jottings/gitHub',
-            // 'jottings/write',
           ]
         },
 
