@@ -101,6 +101,7 @@ module.exports = {
             title: '小程序篇',
             collapsable: false,
             children: [
+                'miniProgram/taro2.md',
                 'miniProgram/taro.md',
                 'miniProgram/taro1.md',
             ]
