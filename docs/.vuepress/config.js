@@ -60,6 +60,12 @@ module.exports = {
               'angular/angular8.md',
             ]
           },{
+            title: '数据库篇',
+            collapsable: false,
+            children: [
+              'database/mongodb1.md',
+            ]
+          },{
             title: '前端自动化篇',
             collapsable: false,
             children: [      
