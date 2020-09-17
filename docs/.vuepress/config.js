@@ -30,6 +30,12 @@ module.exports = {
               'JavaScript/data', 
             ]
           },{
+            title: 'React.js + egg.js',
+            collapsable: false,
+            children: [      
+              'Reactjs/react1', //React服务端渲染   
+            ]
+          },{
             title: 'React篇',
             collapsable: false,
             children: [      
