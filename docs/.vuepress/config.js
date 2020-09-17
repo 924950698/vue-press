@@ -30,6 +30,15 @@ module.exports = {
               'JavaScript/data', 
             ]
           },{
+            title: 'React篇',
+            collapsable: false,
+            children: [      
+              'React/React-SSR', //React服务端渲染   
+              // 'React/baseSkill',  //React基础技能篇
+              // 'React/trialError', //React试错篇
+              'React/hooks'       //React-Hooks篇  
+            ]
+          },{
             title: '前端性能篇',
             collapsable: false,
             children: [     
@@ -70,15 +79,6 @@ module.exports = {
             collapsable: false,
             children: [      
               'autoTest/lesson1', 
-            ]
-          },{
-            title: 'React篇',
-            collapsable: false,
-            children: [      
-              'React/React-SSR', //React服务端渲染   
-              // 'React/baseSkill',  //React基础技能篇
-              // 'React/trialError', //React试错篇
-              // 'React/hooks'       //React-Hooks篇  
             ]
           },{
             title: '算法篇',
