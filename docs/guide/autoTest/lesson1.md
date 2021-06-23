@@ -262,4 +262,68 @@ q: 退出对代码的监控<br >
 Enter：按回车重新运行测试 <br >
 p: 筛选， 文件发生改变时，根据文件名称匹配关键词<br >
 
+## 2-7 异步代码的测试方法
+1. 当异步函数调用一个回调函数时，该如何编写测试用例
+
+```
+const fetchData = (fn) => {
+  axios.get('******').then((res) => {
+    fn(res.data)
+  })
+}
+
+测试用例： 
+test( "fetchData函数的测试用例：", (done) => {
+  fetchData((data) => {
+    expect(data).toEqual({
+      sucess: true
+    })
+    done()      // 表明用例执行结束的位置，否则会提前结束用例的执行
+  })
+})
+
+```
+
+2. 当异步函数返回一个请求时，测试用例如下
+
+```
+const fetchData = () => {
+  return axios.get('******')
+}
+
+测试用例：
+test( "fetchData返回结果为{ sucess: true }", () => {
+  return fetchData().then((res) => {
+    expect(res.data).toEqual({
+      sucess: true
+    })
+  })
+})
+
+test( "fetchData返回结果为404", () => {
+  expect.assertion(1);                // assertion(1) 表示jest会执行1次断言
+  return fetchData().catch((e) => {
+    expect(e.toString().indexOf('404) > -1).toBe(true)
+  })
+})
+````
+
+
+## 2-11 Jest中的Mock
+1. jest.fn()可以用来进行函数模拟
+```
+ * jest.fn()的作用 
+ * 1. 捕获函数的调用和结果 已经this指向和执行顺序 mock()
+ * 2. 可以自由设置返回结果 mockReturnValue()、mockReturnValueOnce()
+ * 3. 异步获取数据改变为同步模拟数据 mockResolvedValue()、mockResolvedValueOnce()
+ * 
+ * mock函数：
+ * mockImplementation()
+ * mockImplementationOnce()方法等价于jest.mock()中的 () => {}, 可以处理逻辑
+ * toBeCallWidth() 每一次的调用结果
+```
+还有其他的一些函数，详细可以参考[官网](https://jestjs.io/zh-Hans/docs/api)
+
+
+
 ### Jest学习暂停
