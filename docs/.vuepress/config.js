@@ -28,6 +28,7 @@ module.exports = {
             collapsable: false,
             children: [      
               'python/study.md', 
+              'python/pyapi.md', 
             ]
           }
         //   {
