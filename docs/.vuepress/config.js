@@ -22,6 +22,15 @@ module.exports = {
           { text: '主页', link: '/' }
       ],
       sidebar:{
+        '/python/': [ 
+          {
+            title: 'python篇',
+            collapsable: false,
+            children: [      
+              'study.md', 
+            ]
+          }
+        ],
         '/guide/': [
           {
             title: 'JavaScript篇',
