@@ -29,6 +29,7 @@ module.exports = {
             children: [      
               'python/study.md', 
               'python/pyapi.md', 
+              'python/pymethods.md', 
             ]
           }
         //   {

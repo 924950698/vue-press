@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "docs:dev": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
+    "docs:build": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs",
+    "deploy": "export NODE_OPTIONS=--openssl-legacy-provider && bash deploy.sh"
   },
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.3.1",
