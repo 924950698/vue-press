@@ -30,6 +30,7 @@ module.exports = {
               'python/study.md', 
               'python/pyapi.md', 
               'python/pymethods.md', 
+              'python/pyfile.md', 
             ]
           }
         //   {
