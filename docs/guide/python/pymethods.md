@@ -66,4 +66,6 @@ list_filter = [90,1,2,3,10,11,100]
 new_list = list(filter(lambda x: x > 10, list_filter))
 print(f'list中大于10的元素： {new_list}') #list中大于10的元素： [90, 11, 100]
 
+# 还有python的内置韩式：map()、filter()、reduce()等结合lambda函数一起使用。
+
 ```
