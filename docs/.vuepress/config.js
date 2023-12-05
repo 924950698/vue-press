@@ -31,6 +31,7 @@ module.exports = {
               'python/pyapi.md', 
               'python/pymethods.md', 
               'python/pyfile.md', 
+              'python/pyerror.md', 
             ]
           }
         //   {

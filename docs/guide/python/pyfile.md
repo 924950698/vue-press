@@ -1,17 +1,6 @@
 ### python语言file方法和os模块
 
 ```
-# -----------------------------------------------------------
-
-# !/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 2023/12/4 15:40
-# @Author  : Dreamers
-# @File    : study_file.py
-# @Software: PyCharm
-
-# ------------------------------------------------------------
-
 # 本篇总结，在python语言中使用文件时的一些基本方法，和经常会用到对os模块
 
 # 使用方法：open(file, mode)
@@ -61,6 +50,16 @@ print(os.path.exists('/Users/liuxiangdong/Desktop/pyStudyProject/study_file.py')
 
 
 ```
+
+| os常用命令      | 含义 |
+| ----------- | ----------- |
+| os.path.dirname(path)   | 返回绝对路径      |
+| os.path.dirname(path)   | 返回文件路径      |
+| os.path.join(path1[, path2[, ...]])   | 把目录和文件名合成一个路径      |
+| os.path.exists(path)        | 判断文件或文件夹是否存在, 返回true/false      |
+
+
+
 
 mdoe参数：
 ![mdoe参数](../../assets/WechatIMG10.jpg "Magic Gardens")
